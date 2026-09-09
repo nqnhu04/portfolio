@@ -1,0 +1,286 @@
+:root{
+    --ink: #3a3936;
+    --ink-soft: #6b6a66;
+    --paper: #ffffff;
+    --line: #e6e4df;
+
+    --ps: #31a8ff;
+    --ps-dark: #0a3d66;
+    --ai: #ff9a00;
+    --ai-dark: #6b3d00;
+    --id: #ff3366;
+    --id-dark: #6b0d24;
+    --pr: #4b4b58;
+    --pr-dark: #b9b9c8;
+    --ae: #9999ff;
+    --ae-dark: #e3e3ff;
+}
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+
+body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 60px 20px 40px;
+}
+
+.page{
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.navbar li a {
+    text-decoration: none;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.25s ease;
+    color: var(--ink);
+}
+.navbar li a:hover {
+    text-decoration: underline;
+    transition: 1px;
+
+}
+
+/* ---------- HEADLINE ---------- */
+
+h1{
+    font-weight: 800;
+    font-size: 44px;
+    letter-spacing: -0.01em;
+}
+
+.categories{
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    margin-top: 10px;
+}
+
+.categories span{ margin: 0 10px; }
+
+/* ---------- BIO ---------- */
+
+.bio-block{
+    border-top: 1.5px solid var(--line);
+    border-bottom: 1.5px solid var(--line);
+    padding: 26px 10px;
+    margin: 26px 0 50px;
+}
+
+.bio-block p{
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin: 0px 20px;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 1.9;
+    color: var(--ink);
+}
+
+/* ---------- SKILL ---------- */
+.section-script{
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--ink);
+    margin-bottom: 22px;
+}
+.section-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+.section-heading .section-script{ margin-bottom: 0; }
+.section-heading svg{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    transform: translateY(2px);
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+}
+.skill-badge{
+    position: relative;
+    width: 62px; height: 62px;
+}
+
+.skill-badge svg{ width: 100%; height: 100%; }
+
+.skill-badge .fill{
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+}
+
+/* ---------- EXPERIENCE ---------- */
+
+.experience{
+    text-align: left;
+    margin: 0 auto 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.exp-item{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4px 18px;
+    padding-bottom: 22px;
+    border-bottom: 1.5px solid var(--line);
+}
+
+.exp-item:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.exp-period{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+    padding-top: 2px;
+}
+
+.exp-role{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+}
+
+.exp-company{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 2px;
+}
+
+.exp-desc{
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-size: 13px;
+line-height: 1.75;
+color: var(--ink);
+margin-top: 8px;
+grid-column: 2;
+}
+
+@media (max-width: 480px){
+    .exp-item{ grid-template-columns: 1fr; }
+    .exp-desc{ grid-column: 1; }
+}
+
+/* ---------- EDUCATION ---------- */
+.education{
+    text-align: left;
+    margin: 0 auto 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.edu-item{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4px 18px;
+    padding-bottom: 22px;
+    border-bottom: 1.5px solid var(--line);
+}
+
+.edu-item:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.edu-year{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+    padding-top: 2px;
+}
+
+.edu-school{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+}
+
+.edu-degree{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 2px;
+}
+
+.edu-note{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-top: 8px;
+    grid-column: 2;
+}
+
+@media (max-width: 480px){
+    .edu-item{ grid-template-columns: 1fr; }
+    .edu-note{ grid-column: 1; }
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.page-num{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 30px;
+}
+
+@media (max-width: 480px){
+    h1{ font-size: 34px; }
+    .categories span{ margin: 0 6px; display: inline-block; }
+    .skills, .pastimes{ gap: 12px; }
+}
